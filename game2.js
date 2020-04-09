@@ -131,8 +131,8 @@ function create() {
       newX1 = Number.parseInt(this.getChildByName('x1').value);
       newY2 = Number.parseInt(this.getChildByName('y2').value);
       newX2 = Number.parseInt(this.getChildByName('x2').value);
-      globalThis.x += Phaser.Math.Wrap((newX1 ? newX1 : 0),0,30)+Phaser.Math.Wrap((newX2 ? newX2 : 0),0,30);
-      globalThis.y -= Phaser.Math.Wrap((newY1 ? newY1 : 0),0,30)+Phaser.Math.Wrap((newY2 ? newY2 : 0),0,30);
+      globalThis.x += (newX1 ? newX1 : 0)+(newX2 ? newX2 : 0);
+      globalThis.y -= (newY1 ? newY1 : 0)+(newY2 ? newY2 : 0);
       console.log(globalThis.x, globalThis.y)
     }
   })

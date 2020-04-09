@@ -127,10 +127,10 @@ function create() {
     if (event.target.name === 'GoButton') {
       moves += 1;
       moveText.setText("moves: "+moves)
-      newY = Number.parseInt(this.getChildByName('y').value);
-      newX = Number.parseInt(this.getChildByName('x').value);
-      globalThis.x += Phaser.Math.Wrap((newX ? newX : 0),0,30);
-      globalThis.y -= Phaser.Math.Wrap((newY ? newY : 0),0,30);
+      newY = Number.parseFloat(this.getChildByName('y').value);
+      newX = Number.parseFloat(this.getChildByName('x').value);
+      globalThis.x += Phaser.Math.Wrap((newX ? newX : 0),-30,30);
+      globalThis.y -= Phaser.Math.Wrap((newY ? newY : 0),-30,30);
       console.log(globalThis.x, globalThis.y)
     }
   })
